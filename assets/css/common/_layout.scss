@@ -1,0 +1,189 @@
+@import "common";
+@import "responsive";
+
+#wrap {
+    width: 100%;
+    margin-top: 6rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    z-index: 99;
+    .inner {
+        width: 100%;
+        max-width: 1060px;
+        padding: 0 2rem;
+        height: 6rem;
+        margin: 0 auto;
+        @include flexbox(row, space-between, center);
+        .logo-wrap {
+            .logo {
+                display: inline-block;
+                width: 10.8rem;
+                height: 3.2rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+        .gnb {
+            ul {
+                @include flexbox(row, center, center);
+                gap: 20px;
+                li {
+                    height: 32px;
+                    padding: 0 2rem;
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        line-height: 32px;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: #171719;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    padding: 4rem 8rem;
+    background: $navy;
+    .inner {
+        width: 100%;
+        max-width: 1060px;
+        margin: 0 auto;
+        @include flexbox(column, center, center);
+        gap: 4rem;
+        .contact {
+            width: 100%;
+            ul {
+                width: 100%;
+                @include flexbox(row, center, center);
+                gap: 1rem;
+                li {
+                    width: calc(50% - 0.5rem);
+                    padding: 0 2rem;
+                    height: 6.4rem;
+                    border-radius: 1rem;
+                    background: rgba(255, 255, 255, 0.10);
+                    @include flexbox(row, flex-start, center);
+                    gap: 2rem;
+                    &:nth-of-type(1) {
+                        span {
+                            &::before {
+                                background: url(../../../assets/images/icon/phone.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
+                            }
+                        }
+                        p {
+                            a {
+                                &:first-child {
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        right: -0.7rem;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        width: 1px;
+                                        height: 1.1rem;
+                                        background: $gray04;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        span {
+                            &::before {
+                                background: url(../../../assets/images/icon/mail.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
+                            }
+                        }
+                    }
+                    span {
+                        position: relative;
+                        color: rgba(255, 255, 255, 0.50);
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        @include flexbox(row, center, center);
+                        gap: 1rem;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 50%;
+                        }
+                    }
+                    p {
+                        @include flexbox(row, center, center);
+                        gap: 1.3rem;
+                        a {
+                            position: relative;
+                            font-size: 2.1rem;
+                            font-weight: 700;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        .info-wrap {
+            width: 100%;
+            @include flexbox(row, space-between, flex-start);
+            .logo-wrap {
+                width: 10.8rem;
+                height: 3.2rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .info {
+                @include flexbox(column, center ,flex-end);
+                gap: 1.6rem;
+                ul {
+                    @include flexbox(row, center, center);
+                    gap: 2rem;
+                    li {
+                        @include flexbox(row, center, center);
+                        gap: 1.3rem;
+                        span {
+                            position: relative;
+                            font-size: 1.3rem;
+                            &:nth-of-type(1) {
+                                color: $white;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    right: -0.7rem;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    width: 1px;
+                                    height: 1.1rem;
+                                    background: $gray06;
+                                }
+                            }
+                            &:nth-of-type(2) {
+                                color: $gray04;
+                            }
+                        }
+                    }
+                }
+                .copyright {
+                    font-size: 1.3rem;
+                    color: $gray04;
+                }
+            }
+        }
+    }
+}

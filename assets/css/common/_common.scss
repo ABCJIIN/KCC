@@ -1,0 +1,137 @@
+@import "responsive";
+
+/* font */
+$pretendard: 'Pretendard';
+
+// 변수 선언
+$black : #1D1D1D; //검정색
+$white : #fff; //하얀색 
+$gray01 : #F0F0F0;
+$gray02: #E4E4E4;
+$gray04: #C6C6C6;
+$gray05 : #F8F8F8;
+$gray50 : #8E8E8E;
+$gray06 : #717171;
+$gray07 : #555;
+$brown: #807146;
+$brown04: #BCAD82;
+$blue: #1A4298;
+$navy: #00002A;
+
+@mixin border($width, $color) {border: $width solid $color;}
+
+@mixin flexbox($direction, $justfy, $align){
+	display:flex;
+    flex-direction: $direction;
+    justify-content: $justfy;
+    align-items: $align;
+}
+
+@mixin ellipsis($num: 1) {
+    @if ($num == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: $num;
+    }
+}
+
+*, *::before, *::after {box-sizing: border-box;}
+
+html {
+    font-size: 10px;
+    @include notebook{font-size: 7.5px;}
+    @include tablet{font-size: 10px;}
+}
+
+body{
+    font-family: $pretendard;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    color: $black;
+    width: 100%;
+    @include tablet{font-size: 1.4rem;}
+}
+
+.hide {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.d-pc{display: block;}
+
+.d-mb{display: none;}
+
+@include tablet{
+    .d-pc{display: none;}
+    .d-mb{display: block;}
+}
+
+// 버튼
+button {
+    font-family: $pretendard;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+}
+
+// 메인 상담하기&자세히 보기 버튼
+.goto-btn {
+    position: relative;
+    display: inline-block;
+    padding: .8rem 1.6rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: $gray07;
+    @include flexbox(row, center, center);
+    background: $white;
+    border-radius: 4rem;
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: .4rem;
+        background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+    }
+}
+
+// 퀵메뉴
+.quick-menu {
+    position: fixed;
+    display: inline-block;
+    right: 0;
+    bottom: 2rem;
+    z-index: 99;
+    .inner {
+        @include flexbox(column, center, center);
+        gap: 1.2rem;
+        .counsel-btn{ 
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+            background: url(../../../assets/images/icon/chat.png) no-repeat center/2.4rem $blue;
+        }
+        .top-btn {
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            border: 1px solid $gray01;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
+            background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem $white;
+        }
+    }
+}
