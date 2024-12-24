@@ -240,7 +240,6 @@ section {
                 padding-top: 4rem;
                 @include flexbox(row, center, center);
                 button {
-                    font-size: 1.5rem;
                     padding: 0.8rem 4rem;
                     border: 1px solid $gray02;
                 }
