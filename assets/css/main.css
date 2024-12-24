@@ -72,7 +72,7 @@ button {
   position: relative;
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #555;
   display: flex;
@@ -194,7 +194,7 @@ button {
   position: relative;
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #555;
   display: flex;
@@ -698,7 +698,6 @@ section.sec04 > .inner > .btn-wrap {
   align-items: center;
 }
 section.sec04 > .inner > .btn-wrap button {
-  font-size: 1.5rem;
   padding: 0.8rem 4rem;
   border: 1px solid #E4E4E4;
 }
