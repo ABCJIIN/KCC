@@ -482,7 +482,7 @@ section.sec01 > .inner > .title-wrap {
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 0 2rem;
-  max-width: 1460px;
+  max-width: 1060px;
   margin: 0 auto;
   gap: 2rem;
   z-index: 10;
