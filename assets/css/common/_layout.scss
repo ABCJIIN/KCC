@@ -17,12 +17,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    border-bottom: 1px solid $gray01;
     background: $white;
     z-index: 99;
     .inner {
         position: relative;
         width: 100%;
-        max-width: 1060px;
+        max-width: 1100px;
         padding: 0 2rem;
         height: 6rem;
         margin: 0 auto;
@@ -121,7 +122,7 @@ footer {
     background: $navy;
     .inner {
         width: 100%;
-        max-width: 1060px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 4rem 2rem 8rem;
         @include flexbox(column, center, center);
@@ -135,9 +136,6 @@ footer {
                 width: 100%;
                 @include flexbox(row, center, center);
                 gap: 1rem;
-                // @include tablet {
-                //     @include flexbox(column, center, center);
-                // }
                 @media (max-width: 1000px) {
                     @include flexbox(column, center, center);
                 }
@@ -215,6 +213,9 @@ footer {
                                 font-weight: 700;
                                 color: $white;
                                 @media (max-width: 1200px) {
+                                    font-size: 1.8rem;
+                                }
+                                @include tablet {
                                     font-size: 1.5rem;
                                 }
                             }

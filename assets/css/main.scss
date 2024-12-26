@@ -5,12 +5,12 @@ section {
     position: relative;
     width: 100%;
     &:not(:nth-of-type(1)) {
-        padding: 10rem 0;
+        padding: 10rem 2rem;
+        // padding: 0 2rem;
         > .inner {
             width: 100%;
             max-width: 1060px;
             margin: 0 auto;
-            padding: 0 2rem;
         }
     }
     > .inner {
@@ -50,7 +50,7 @@ section {
                 transform: translate(-50%, -50%);
                 width: 100%;
                 padding: 0 2rem;
-                max-width: 1060px;
+                max-width: 1100px;
                 margin: 0 auto;
                 gap: 2rem;
                 z-index: 10;
@@ -109,10 +109,12 @@ section {
     }
     &.sec02 {
         background: $gray05;
+        @include tablet {
+            padding: 10rem 0;
+        }
         > .inner {
-            @include tablet {
-                padding: 0;
-                .title-wrap {
+            .title-wrap {
+                @include tablet {
                     padding: 0 2rem;
                 }
             }
@@ -345,7 +347,7 @@ section {
             > .btn-wrap {
                 padding-top: 4rem;
                 @include flexbox(row, center, center);
-                button {
+                .goto-btn {
                     padding: 1.4rem 4rem;
                     border: 1px solid $gray02;
                 }
