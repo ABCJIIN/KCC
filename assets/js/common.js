@@ -17,18 +17,6 @@ $(document).ready(function(){
         },
     },KVSlide);
 
-    // 창틀 교체 시기 슬라이드
-    var CheckSlide = new Swiper("#CheckSlide", {
-        loop: false,
-        speed: 400,
-        spaceBetween : 16,
-        slidesPerView: 3, // 한 번에 표시할 슬라이드 수
-        // slideActiveClass: 'on',
-        // autoplay: {
-        //     delay: 3200,
-        //     disableOnInteraction: false,
-        // },
-    },CheckSlide);
-
+    
 
 });
