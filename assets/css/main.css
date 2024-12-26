@@ -66,6 +66,7 @@ button {
   align-items: center;
   background: #fff;
   border-radius: 4rem;
+  transition: all 0.25s;
 }
 .goto-btn::after {
   content: "";
@@ -74,6 +75,16 @@ button {
   height: 2.4rem;
   margin-left: 0.4rem;
   background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+  transition: all 0.25s;
+}
+.goto-btn:hover {
+  color: #fff;
+  background: #1A4298;
+  transition: all 0.25s;
+}
+.goto-btn:hover::after {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(150%) contrast(102%);
+  transition: all 0.25s;
 }
 
 .quick-menu {
@@ -173,6 +184,7 @@ button {
   align-items: center;
   background: #fff;
   border-radius: 4rem;
+  transition: all 0.25s;
 }
 .goto-btn::after {
   content: "";
@@ -181,6 +193,16 @@ button {
   height: 2.4rem;
   margin-left: 0.4rem;
   background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+  transition: all 0.25s;
+}
+.goto-btn:hover {
+  color: #fff;
+  background: #1A4298;
+  transition: all 0.25s;
+}
+.goto-btn:hover::after {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(150%) contrast(102%);
+  transition: all 0.25s;
 }
 
 .quick-menu {
@@ -234,13 +256,14 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  border-bottom: 1px solid #F0F0F0;
   background: #fff;
   z-index: 99;
 }
 header .inner {
   position: relative;
   width: 100%;
-  max-width: 1060px;
+  max-width: 1100px;
   padding: 0 2rem;
   height: 6rem;
   margin: 0 auto;
@@ -341,7 +364,7 @@ footer {
 }
 footer .inner {
   width: 100%;
-  max-width: 1060px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 2rem 8rem;
   display: flex;
@@ -464,6 +487,11 @@ footer .inner .contact ul li div p a {
 }
 @media (max-width: 1200px) {
   footer .inner .contact ul li div p a {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  footer .inner .contact ul li div p a {
     font-size: 1.5rem;
   }
 }
@@ -565,13 +593,12 @@ section {
   width: 100%;
 }
 section:not(:nth-of-type(1)) {
-  padding: 10rem 0;
+  padding: 10rem 2rem;
 }
 section:not(:nth-of-type(1)) > .inner {
   width: 100%;
   max-width: 1060px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 section > .inner {
   position: relative;
@@ -617,7 +644,7 @@ section.sec01 > .inner > .title-wrap {
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 0 2rem;
-  max-width: 1060px;
+  max-width: 1100px;
   margin: 0 auto;
   gap: 2rem;
   z-index: 10;
@@ -688,9 +715,11 @@ section.sec02 {
   background: #F8F8F8;
 }
 @media (max-width: 768px) {
-  section.sec02 > .inner {
-    padding: 0;
+  section.sec02 {
+    padding: 10rem 0;
   }
+}
+@media (max-width: 768px) {
   section.sec02 > .inner .title-wrap {
     padding: 0 2rem;
   }
@@ -978,7 +1007,7 @@ section.sec04 > .inner > .btn-wrap {
   justify-content: center;
   align-items: center;
 }
-section.sec04 > .inner > .btn-wrap button {
+section.sec04 > .inner > .btn-wrap .goto-btn {
   padding: 1.4rem 4rem;
   border: 1px solid #E4E4E4;
 }

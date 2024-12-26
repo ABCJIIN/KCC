@@ -99,6 +99,7 @@ button {
     @include flexbox(row, center, center);
     background: $white;
     border-radius: 4rem;
+    transition: all 0.25s;
     &::after {
         content: '';
         display: inline-block;
@@ -106,6 +107,16 @@ button {
         height: 2.4rem;
         margin-left: .4rem;
         background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+        transition: all 0.25s;
+    }
+    &:hover {
+        color: $white;
+        background: $blue;
+        transition: all 0.25s;
+        &::after {
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(150%) contrast(102%);
+            transition: all 0.25s;
+        }
     }
 }
 

@@ -1,0 +1,172 @@
+@import "./common/_common";
+@import "./common/_layout";
+
+// 회사소개
+.company {
+    #wrap {
+        padding: 10rem 0 20rem;
+        @include tablet {
+            padding: 0 0 10rem;
+        }
+        section {
+            position: relative;
+            width: 100%;
+            padding: 0 2rem;
+            > .inner {
+                position: relative;
+                width: 100%;
+                max-width: 1060px;
+                margin: 0 auto;
+                > .title-wrap {
+                    @include flexbox(column, flex-start, flex-start);
+                    gap: 0.8rem;
+                    margin-bottom: 4rem;
+                    strong {
+                        font-size: 3.2rem;
+                        font-weight: 700;
+                        line-height: 4.2rem;
+                        @include tablet {
+                            font-size: 2.5rem;
+                            line-height: 3.2rem;
+                        }
+                    }
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 2.2rem;
+                    }
+                }
+            }
+            &.sec01 {
+                padding-bottom: 10rem;
+                @include tablet {
+                    padding: 0 0 6rem;
+                }
+                > .inner {
+                    height: 26.2rem;
+                    border-radius: 1rem;
+                    background: url(../../assets/images/sub/company_bg.png) no-repeat center/cover;
+                    @include flexbox(row, center, center);
+                    gap: 9.2rem;
+                    @include tablet {
+                        height: 49.8rem;
+                        border-radius: 0;
+                        @include flexbox(column, center, center);
+                        gap: 5.5rem;
+                    }
+                    .title {
+                        @include flexbox(column, center, center);
+                        gap: 1.2rem;
+                        p {
+                            font-size: 1.9rem;
+                            // font-size: clamp(1.5rem, 0.990vw, 1.9rem);
+                            font-weight: 700;
+                            line-height: 2.6rem;
+                            color: $brown;
+                            @include tablet {
+                                font-size: 1.5rem;
+                                line-height: 2.2rem;
+                            }
+                        }
+                        strong {
+                            font-size: 4rem;
+                            // font-size: clamp(3.2rem, 2.083vw, 4rem);
+                            font-weight: 700;
+                            line-height: 5.2rem;
+                            @include tablet {
+                                text-align: center;
+                                font-size: 3.2rem;
+                                line-height: 4.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &.sec02 {
+                @media (max-width: 1000px) {
+                    padding: 0;
+                }
+                > .inner {
+                    position: relative;
+                    .title-wrap {
+                        @media (max-width: 1000px) {
+                            padding: 0 2rem;
+                        }
+                    }
+                    .list-wrap {
+                        @media (max-width: 1000px) {
+                            padding-left: 2rem;
+                        }
+                        ul {
+                            width: 100%;
+                            @include flexbox(row, flex-start, flex-start);
+                            gap: 1.6rem;
+                            @media (max-width: 1000px) {
+                                padding-right: 2rem;
+                                overflow-x: auto;
+                                &::-webkit-scrollbar {
+                                    display: none;
+                                }
+                                -ms-overflow-style: none; /* 인터넷 익스플로러 */
+                                scrollbar-width: none; /* 파이어폭스 */
+                            }
+                            li {
+                                width: calc(25% - 1.2rem);
+                                min-height: 38.5rem;
+                                height: 100%;
+                                flex-shrink: 0;
+                                border: 1px solid $gray02;
+                                border-radius: 4px;
+                                background: $white;
+                                @media (max-width: 1000px) {
+                                    width: 25.3rem;
+                                }
+                                .img-wrap {
+                                    position: relative;
+                                    width: 100%;
+                                    height: 19.2rem;
+                                    background: url(../../assets/images/sub/compay_list_bg.png) no-repeat center/cover;
+                                    img {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 1.7rem;
+                                        transform: translateX(-50%);
+                                    }
+                                }
+                                .info-wrap {
+                                    padding: 2rem;
+                                    @include flexbox(column, flex-start, flex-start);
+                                    gap: 1.4rem;
+                                    strong {
+                                        font-size: 2.1rem;
+                                        font-size: clamp(1.8rem, 1.094vw, 2.1rem);
+                                        font-weight: 700;
+                                        line-height: 2.8rem;
+                                        line-height: clamp(2.1rem, 1.458vw,2.8rem);
+                                        @media (max-width: 1000px) {
+                                            font-size: 2.1rem;
+                                            line-height: 2.8rem;
+                                        }
+                                    }
+                                    p {
+                                        font-size: 1.3rem;
+                                        line-height: 1.8rem;
+                                        color: $gray07;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// KCC 제품
+// .product {
+
+// }
+
+// 시공사례
+
+// 상담하기기
