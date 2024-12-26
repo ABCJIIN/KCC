@@ -10,13 +10,10 @@ $(document).ready(function(){
         effect:'fade',
         speed: 400,
         spaceBetween : 0,
-        // slideActiveClass: 'on',
         autoplay: {
             delay: 3200,
             disableOnInteraction: false,
         },
     },KVSlide);
-
-    
 
 });
