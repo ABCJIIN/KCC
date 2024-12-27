@@ -127,6 +127,7 @@ button {
   justify-content: flex-start;
   align-items: center;
   gap: 0.4rem;
+  margin-bottom: 2rem;
 }
 .tab-menu .tab-list li {
   padding: 0.6rem 1.6rem;
@@ -156,20 +157,14 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
   display: none;
 }
 .tab-menu .tab-cont > div.on {
   display: flex;
-}
-.tab-menu .tab-cont > div.tab-panel01 {
-  background: #f0f0f0;
-}
-.tab-menu .tab-cont > div.tab-panel02 {
-  background: #fff2f2;
-}
-.tab-menu .tab-cont > div.tab-panel03 {
-  background: #e2f0f5;
 }
 
 /* 노트북 */
@@ -300,6 +295,7 @@ button {
   justify-content: flex-start;
   align-items: center;
   gap: 0.4rem;
+  margin-bottom: 2rem;
 }
 .tab-menu .tab-list li {
   padding: 0.6rem 1.6rem;
@@ -329,20 +325,14 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
   display: none;
 }
 .tab-menu .tab-cont > div.on {
   display: flex;
-}
-.tab-menu .tab-cont > div.tab-panel01 {
-  background: #f0f0f0;
-}
-.tab-menu .tab-cont > div.tab-panel02 {
-  background: #fff2f2;
-}
-.tab-menu .tab-cont > div.tab-panel03 {
-  background: #e2f0f5;
 }
 
 /* 노트북 */

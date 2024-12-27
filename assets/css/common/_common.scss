@@ -155,6 +155,7 @@ button {
         width: 100%;
         @include flexbox(row, flex-start, center);
         gap: 0.4rem;
+        margin-bottom: 2rem;
         li {
             padding: 0.6rem 1.6rem;
             border-radius: 3rem;
@@ -180,20 +181,23 @@ button {
         > div {
             width: 100%;
             height: 100%;
-            @include flexbox(row, flex-start, flex-start);
+            @include flexbox(row, flex-start, stretch);
+            border: 1px solid $gray02;
+            border-radius: 0.4rem;
+            background: $white;
             display: none;
             &.on {
                 display: flex;
             }
-            &.tab-panel01 {
-                background: #f0f0f0;
-            }
-            &.tab-panel02 {
-                background: #fff2f2;
-            }
-            &.tab-panel03 {
-                background: #e2f0f5;
-            }
+            // &.tab-panel01 {
+            //     background: #f0f0f0;
+            // }
+            // &.tab-panel02 {
+            //     background: #fff2f2;
+            // }
+            // &.tab-panel03 {
+            //     background: #e2f0f5;
+            // }
         }
     }
 }
