@@ -147,3 +147,53 @@ button {
         }
     }
 }
+
+// 탭 메뉴
+.tab-menu {
+    width: 100%;
+    .tab-list {
+        width: 100%;
+        @include flexbox(row, flex-start, center);
+        gap: 0.4rem;
+        li {
+            padding: 0.6rem 1.6rem;
+            border-radius: 3rem;
+            border: 1px solid $gray01;
+            background: $white;
+            &.on {
+                background: $blue;
+                a {
+                    color: $white;
+                    font-weight: 700;
+                }
+            }
+            a {
+                width: 100%;
+                font-size: 1.5rem;
+                color: $gray07;
+                text-align: center;
+            }
+        }
+    }
+    .tab-cont {
+        height: 50rem;
+        > div {
+            width: 100%;
+            height: 100%;
+            @include flexbox(row, flex-start, flex-start);
+            display: none;
+            &.on {
+                display: flex;
+            }
+            &.tab-panel01 {
+                background: #f0f0f0;
+            }
+            &.tab-panel02 {
+                background: #fff2f2;
+            }
+            &.tab-panel03 {
+                background: #e2f0f5;
+            }
+        }
+    }
+}
