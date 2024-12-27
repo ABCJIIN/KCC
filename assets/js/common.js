@@ -16,4 +16,14 @@ $(document).ready(function(){
         },
     },KVSlide);
 
+    // 탭 메뉴
+    $('.tab-list > li').on('click', function() {
+        let tabList = $('.tab-list > li').index(this);
+
+        $('.tab-list > li, .tab-cont > div').removeClass('on');
+        
+        $(this).addClass('on');
+        $('.tab-cont > div:eq('+ tabList +')').addClass('on');
+    });
+
 });

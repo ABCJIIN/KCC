@@ -117,6 +117,61 @@ button {
   background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
 }
 
+.tab-menu {
+  width: 100%;
+}
+.tab-menu .tab-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tab-menu .tab-list li {
+  padding: 0.6rem 1.6rem;
+  border-radius: 3rem;
+  border: 1px solid #F0F0F0;
+  background: #fff;
+}
+.tab-menu .tab-list li.on {
+  background: #1A4298;
+}
+.tab-menu .tab-list li.on a {
+  color: #fff;
+  font-weight: 700;
+}
+.tab-menu .tab-list li a {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+}
+.tab-menu .tab-cont {
+  height: 50rem;
+}
+.tab-menu .tab-cont > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: none;
+}
+.tab-menu .tab-cont > div.on {
+  display: flex;
+}
+.tab-menu .tab-cont > div.tab-panel01 {
+  background: #f0f0f0;
+}
+.tab-menu .tab-cont > div.tab-panel02 {
+  background: #fff2f2;
+}
+.tab-menu .tab-cont > div.tab-panel03 {
+  background: #e2f0f5;
+}
+
 /* 노트북 */
 /* 테블릿 */
 /* 모바일 */
@@ -233,6 +288,61 @@ button {
   border: 1px solid #F0F0F0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
   background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
+}
+
+.tab-menu {
+  width: 100%;
+}
+.tab-menu .tab-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tab-menu .tab-list li {
+  padding: 0.6rem 1.6rem;
+  border-radius: 3rem;
+  border: 1px solid #F0F0F0;
+  background: #fff;
+}
+.tab-menu .tab-list li.on {
+  background: #1A4298;
+}
+.tab-menu .tab-list li.on a {
+  color: #fff;
+  font-weight: 700;
+}
+.tab-menu .tab-list li a {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+}
+.tab-menu .tab-cont {
+  height: 50rem;
+}
+.tab-menu .tab-cont > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: none;
+}
+.tab-menu .tab-cont > div.on {
+  display: flex;
+}
+.tab-menu .tab-cont > div.tab-panel01 {
+  background: #f0f0f0;
+}
+.tab-menu .tab-cont > div.tab-panel02 {
+  background: #fff2f2;
+}
+.tab-menu .tab-cont > div.tab-panel03 {
+  background: #e2f0f5;
 }
 
 /* 노트북 */

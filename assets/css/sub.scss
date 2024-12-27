@@ -163,9 +163,30 @@
 }
 
 // KCC 제품
-// .product {
-
-// }
+.product {
+    #wrap {
+        padding: 10rem 0 20rem;
+        .main-title {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 10rem;
+            strong {
+                font-size: 5rem;
+                line-height: 6.2rem;
+                font-weight: 700;
+            }
+        }
+        section {
+            position: relative;
+            width: 100%;
+            padding: 0 2rem;
+            &.sec01 {
+                background: $gray05;
+            }
+        }
+    }
+}
 
 // 시공사례
 
