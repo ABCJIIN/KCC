@@ -16,14 +16,18 @@ $(document).ready(function(){
         },
     },KVSlide);
 
-    // 탭 메뉴
-    $('.tab-list > li').on('click', function() {
-        let tabList = $('.tab-list > li').index(this);
-
-        $('.tab-list > li, .tab-cont > div').removeClass('on');
+    // 탭 메뉴 클릭 이벤트
+    $('.tab-menu').each(function() {
+        let $tabMenu = $(this); // 현재 탭 메뉴 그룹
         
-        $(this).addClass('on');
-        $('.tab-cont > div:eq('+ tabList +')').addClass('on');
+        $tabMenu.find('.tab-list > li').on('click', function() {
+            let tabIndex = $tabMenu.find('.tab-list > li').index(this); // 클릭된 탭의 인덱스
+
+            // 현재 탭 메뉴 그룹의 탭과 콘텐츠 클래스 관리
+            $tabMenu.find('.tab-list > li, .tab-cont > div').removeClass('on');
+            $(this).addClass('on');
+            $tabMenu.find('.tab-cont > div').eq(tabIndex).addClass('on');
+        });
     });
 
 });
