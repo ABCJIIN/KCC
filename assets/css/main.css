@@ -121,6 +121,7 @@ button {
   width: 100%;
 }
 .tab-menu .tab-list {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -149,7 +150,7 @@ button {
   text-align: center;
 }
 .tab-menu .tab-cont {
-  height: 50rem;
+  min-height: 50rem;
 }
 .tab-menu .tab-cont > div {
   width: 100%;
@@ -289,6 +290,7 @@ button {
   width: 100%;
 }
 .tab-menu .tab-list {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -317,7 +319,7 @@ button {
   text-align: center;
 }
 .tab-menu .tab-cont {
-  height: 50rem;
+  min-height: 50rem;
 }
 .tab-menu .tab-cont > div {
   width: 100%;
@@ -349,6 +351,16 @@ button {
   #wrapper #wrap {
     margin-top: 5.6rem;
   }
+}
+#wrapper #wrap .main-title {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#wrapper #wrap .main-title strong {
+  font-size: 5rem;
+  line-height: 6.2rem;
+  font-weight: 700;
 }
 
 header {
