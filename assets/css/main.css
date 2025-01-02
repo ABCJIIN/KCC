@@ -46,6 +46,48 @@ body {
     display: block;
   }
 }
+input[type=text] {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0 1.2rem;
+  font-size: 1.7rem;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+}
+input[type=text]::placeholder {
+  color: #8E8E8E;
+}
+input[type=text]:focus {
+  outline: 2px solid #1D1D1D;
+}
+
+textarea {
+  width: 100%;
+  height: 20.5rem;
+  padding: 1.4rem 1.2rem;
+  font-family: "Pretendard";
+  font-size: 1.7rem;
+  color: #1D1D1D;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+  resize: none;
+}
+textarea::placeholder {
+  color: #8E8E8E;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #F0F0F0;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 button {
   font-family: "Pretendard";
   font-size: 1.5rem;
@@ -215,6 +257,48 @@ body {
     display: block;
   }
 }
+input[type=text] {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0 1.2rem;
+  font-size: 1.7rem;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+}
+input[type=text]::placeholder {
+  color: #8E8E8E;
+}
+input[type=text]:focus {
+  outline: 2px solid #1D1D1D;
+}
+
+textarea {
+  width: 100%;
+  height: 20.5rem;
+  padding: 1.4rem 1.2rem;
+  font-family: "Pretendard";
+  font-size: 1.7rem;
+  color: #1D1D1D;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+  resize: none;
+}
+textarea::placeholder {
+  color: #8E8E8E;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #F0F0F0;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 button {
   font-family: "Pretendard";
   font-size: 1.5rem;

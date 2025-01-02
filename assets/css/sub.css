@@ -46,6 +46,48 @@ body {
     display: block;
   }
 }
+input[type=text] {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0 1.2rem;
+  font-size: 1.7rem;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+}
+input[type=text]::placeholder {
+  color: #8E8E8E;
+}
+input[type=text]:focus {
+  outline: 2px solid #1D1D1D;
+}
+
+textarea {
+  width: 100%;
+  height: 20.5rem;
+  padding: 1.4rem 1.2rem;
+  font-family: "Pretendard";
+  font-size: 1.7rem;
+  color: #1D1D1D;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+  resize: none;
+}
+textarea::placeholder {
+  color: #8E8E8E;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #F0F0F0;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 button {
   font-family: "Pretendard";
   font-size: 1.5rem;
@@ -215,6 +257,48 @@ body {
     display: block;
   }
 }
+input[type=text] {
+  width: 100%;
+  height: 5.2rem;
+  padding: 0 1.2rem;
+  font-size: 1.7rem;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+}
+input[type=text]::placeholder {
+  color: #8E8E8E;
+}
+input[type=text]:focus {
+  outline: 2px solid #1D1D1D;
+}
+
+textarea {
+  width: 100%;
+  height: 20.5rem;
+  padding: 1.4rem 1.2rem;
+  font-family: "Pretendard";
+  font-size: 1.7rem;
+  color: #1D1D1D;
+  border: 1px solid #E4E4E4;
+  border-radius: 0.4rem;
+  background: #fff;
+  resize: none;
+}
+textarea::placeholder {
+  color: #8E8E8E;
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background: #F0F0F0;
+}
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 button {
   font-family: "Pretendard";
   font-size: 1.5rem;
@@ -1136,4 +1220,112 @@ footer .inner .info-wrap .info .copyright {
   font-size: 1.7rem;
   line-height: 2.4rem;
   color: #8E8E8E;
+}
+
+.review-detail #wrap {
+  padding: 10rem 0 20rem;
+}
+.review-detail #wrap section {
+  position: relative;
+  width: 100%;
+}
+.review-detail #wrap section > .inner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+.review-detail #wrap section > .inner .review-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #E4E4E4;
+}
+.review-detail #wrap section > .inner .review-title strong {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+}
+.review-detail #wrap section > .inner .review-title span {
+  font-size: 1.7rem;
+  font-weight: 2.4rem;
+  color: #8E8E8E;
+}
+.review-detail #wrap section > .inner .review-cont {
+  width: 100%;
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6rem;
+}
+.review-detail #wrap section > .inner .review-cont .img-wrap {
+  width: 100%;
+  height: 60rem;
+}
+.review-detail #wrap section > .inner .review-cont .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.review-detail #wrap section > .inner .btn-wrap {
+  padding-top: 6rem;
+  border-top: 1px solid #E4E4E4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.review-detail #wrap section > .inner .btn-wrap a {
+  width: 21.3rem;
+  border: 1px solid #E4E4E4;
+}
+
+.contact #wrap {
+  padding: 10rem 0 20rem;
+}
+.contact #wrap section {
+  position: relative;
+  width: 100%;
+}
+.contact #wrap section > .inner {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.contact #wrap section > .inner .visual {
+  width: 37.5rem;
+  height: 60.5rem;
+  border-radius: 4px;
+  background: url(../../assets/images/sub/contact_visual.png) no-repeat center/cover;
+}
+.contact #wrap section > .inner .visual strong {
+  display: inline-block;
+  padding-top: 11rem;
+  padding-left: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+  color: #fff;
+}
+.contact #wrap section > .inner .visual p {
+  padding-top: 1.2rem;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #fff;
+}
+.contact #wrap section > .inner .input-cont {
+  width: calc(100% - 47.5rem);
 }
