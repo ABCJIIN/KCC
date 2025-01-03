@@ -30,4 +30,18 @@ $(document).ready(function(){
         });
     });
 
+    // product 제품 탭 메뉴 설명 모바일 토글 버튼
+    // $('.tab-menu').each(function() {
+    //     let $tabMenu = $(this); // 현재 탭 메뉴 그룹
+        
+    //     $tabMenu.find('.tab-list > li').on('click', function() {
+    //         let tabIndex = $tabMenu.find('.tab-list > li').index(this); // 클릭된 탭의 인덱스
+
+    //         // 현재 탭 메뉴 그룹의 탭과 콘텐츠 클래스 관리
+    //         $tabMenu.find('.tab-list > li, .tab-cont > div').removeClass('on');
+    //         $(this).addClass('on');
+    //         $tabMenu.find('.tab-cont > div').eq(tabIndex).addClass('on');
+    //     });
+    // });
+
 });
