@@ -4,20 +4,22 @@
 $pretendard: 'Pretendard';
 
 // 변수 선언
-$black : #1D1D1D; //검정색
-$white : #fff; //하얀색 
-$gray01 : #F0F0F0;
+$black: #1D1D1D; //검정색
+$white: #fff; //하얀색 
+$gray01: #F0F0F0;
 $gray02: #E4E4E4;
+$gray03: #D8D8D8;
 $gray04: #C6C6C6;
-$gray05 : #F8F8F8;
-$gray50 : #8E8E8E;
-$gray06 : #717171;
-$gray07 : #555;
+$gray05: #F8F8F8;
+$gray50: #8E8E8E;
+$gray06: #717171;
+$gray07: #555;
 $brown: #807146;
 $brown04: #BCAD82;
 $blue: #1A4298;
 $blue02: #00065C;
 $navy: #00002A;
+$red: #EB2B20;
 
 @mixin border($width, $color) {border: $width solid $color;}
 
@@ -189,6 +191,7 @@ button {
             border: 1px solid $gray01;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
             background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem $white;
+            display: none;
         }
     }
 }

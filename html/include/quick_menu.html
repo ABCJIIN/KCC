@@ -6,15 +6,20 @@
 <!-- TOP 버튼 -->
 <script>
     $(document).ready(function () {
-    
-        // $(window).scroll(function () {
-        //     if ($(this).scrollTop() > 200) {
-        //         $('.top-btn').fadeIn(300);
-        //     } else {
-        //         $('.top-btn').fadeOut(300);
-        //     }
-        // });
 
+        // quick_menu.html 페이지에서만 "counsel-btn" 숨기기
+        if (window.location.pathname.includes("contact.html")) {
+            $('.counsel-btn').hide(); // "counsel-btn" 숨김
+        }
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 200) {
+                $('.top-btn').fadeIn(300);
+            } else {
+                $('.top-btn').fadeOut(300);
+            }
+        });
+        
         $('.top-btn').click(function (event) {
             event.preventDefault();
             $('html, body').animate({ scrollTop: 0 }, 500);
