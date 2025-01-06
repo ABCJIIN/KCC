@@ -231,7 +231,7 @@ button {
             width: 100%;
             height: 100%;
             @include flexbox(row, flex-start, stretch);
-            border: 1px solid $gray02;
+            // border: 1px solid $gray02;
             border-radius: 0.4rem;
             background: $white;
             display: none;
