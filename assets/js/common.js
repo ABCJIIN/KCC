@@ -31,9 +31,33 @@ $(document).ready(function(){
     });
 
     // product 제품 탭 메뉴 설명 모바일 토글 버튼
+    // 버튼 클릭 이벤트
     $('.info-wrap .top .toggle-btn').on('click', function() {
-        $(this).closest('.top').next('.info').slideToggle();
-        $(this).toggleClass('on');
+        const windowWidth = $(window).width();
+
+        if (windowWidth > 768) {
+            // PC 화면에서는 항상 슬라이드 다운
+            $(this).closest('.top').next('.info').slideDown();
+            $(this).removeClass('on');
+        } else {
+            // 모바일 화면에서는 슬라이드 토글
+            $(this).closest('.top').next('.info').slideToggle();
+            $(this).toggleClass('on');
+        }
     });
+
+    // 화면 크기 변경 시 이벤트
+    $(window).on('resize', function() {
+        const windowWidth = $(window).width();
+
+        if (windowWidth > 768) {
+            // PC 화면으로 변경될 때 슬라이드 다운
+            $('.info-wrap .info').slideDown();
+            $('.info-wrap .top .toggle-btn').removeClass('on');
+        }
+    });
+
+    // AOS 플러그인
+    AOS.init();
 
 });
