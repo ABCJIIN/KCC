@@ -200,6 +200,7 @@
                 }
                 .tab-cont {
                     > div {
+                        border: 1px solid $gray02;
                         .img-wrap {
                             width: 60.38%;
                             border-right: 1px solid $gray02;
@@ -260,6 +261,7 @@
                                             @include flexbox(row, flex-start, flex-start);
                                             p {
                                                 width: calc(100% - 1.1rem);
+                                                word-break: keep-all;
                                             }
                                             &::before {
                                                 display: inline-block;
@@ -442,8 +444,14 @@
 .review {
     #wrap {
         padding: 10rem 0 20rem;
+        @include tablet {
+            padding: 4rem 0 10rem;
+        }
         .main-title {
             padding: 0 2rem 6rem;
+            @include tablet {
+                padding: 0 2rem 4rem;
+            }
         }
         section {
             position: relative;
@@ -454,6 +462,9 @@
                 padding: 0 2rem;
                 margin: 0 auto;
                 .tab-list {
+                    @include tablet {
+                        margin-bottom: 5rem;
+                    }
                     li {
                         .total {
                             position: absolute;
@@ -464,11 +475,24 @@
                             font-size: 1.7rem;
                             line-height: 2.4rem;
                             color: $gray07;
+                            @include tablet {
+                                right: auto;
+                                left: 0;
+                                top: auto;
+                                bottom: -3.5rem;
+                                transform: translateY(0);
+                                font-size: 1.3rem;
+                                line-height: 1.8rem;
+                            }
                             > span {
                                 font-size: 1.9rem;
                                 font-weight: 700;
                                 line-height: 2.6rem;
                                 color: $blue;
+                                @include tablet {
+                                    font-size: 1.5rem;
+                                    line-height: 2.2rem;
+                                }
                             }
                         }
                         &.on {
@@ -488,16 +512,29 @@
                         @include flexbox(row, flex-start, flex-start);
                         flex-wrap: wrap;
                         gap: 2.8rem 1.6rem;
+                        @include tablet {
+                            gap: 2rem 1rem;
+                        }
                         li {
                             width: calc(25% - 1.2rem);
+                            @include tablet_junction {
+                                width: calc(100% / 3 - 1.1rem);
+                            }
+                            @include tablet {
+                                width: calc(50% - 0.5rem);
+                            }
                             a {
                                 display: inline-block;
                                 width: 100%;
                                 .img-wrap {
                                     width: 100%;
-                                    height: 25.3rem;
+                                    aspect-ratio: 1;
+                                    // height: 25.3rem;
                                     margin-bottom: 1.2rem;
                                     border-radius: 4px;
+                                    @include tablet {
+                                        margin-bottom: 0.8rem;
+                                    }
                                     img {
                                         width: 100%;
                                         height: 100%;
@@ -511,11 +548,19 @@
                                         line-height: 2.4rem;
                                         color: $gray07;
                                         @include ellipsis(1);
+                                        @include tablet {
+                                            font-size: 1.5rem;
+                                            line-height: 2.2rem;
+                                        }
                                     }
                                     span {
                                         font-size: 1.7rem;
                                         line-height: 2.4rem;
                                         color:  $gray50;
+                                        @include tablet {
+                                            font-size: 1.3rem;
+                                            line-height: 1.8rem;
+                                        }
                                     }
                                 }
                             }
@@ -531,6 +576,9 @@
 .review-detail {
     #wrap {
         padding: 10rem 0 20rem;
+        @include tablet {
+            padding: 4rem 0 10rem;
+        }
         section {
             position: relative;
             width: 100%;
@@ -545,36 +593,78 @@
                     gap: 4rem;
                     padding-bottom: 6rem;
                     border-bottom: 1px solid $gray02;
+                    @include tablet_junction {
+                        gap: 2rem;
+                        // padding-bottom: 4rem;
+                    }
+                    @include tablet {
+                        @include flexbox(column, center, flex-start);
+                        gap: 0.8rem;
+                        padding-bottom: 2rem;
+                    }
                     strong {
                         font-size: 4rem;
+                        // font-size: clamp(2.5rem, 2.083vw, 4rem);
                         font-weight: 700;
                         line-height: 5.2rem;
+                        @include tablet_junction {
+                            font-size: 3rem;
+                            line-height: 4.2rem;
+                        }
+                        @include tablet {
+                            font-size: 2.5rem;
+                            line-height: 3.2rem;
+                        }
                     }
                     span {
                         font-size: 1.7rem;
                         font-weight: 2.4rem;
                         color: $gray50;
+                        @include tablet {
+                            font-size: 1.3rem;
+                            line-height: 1.8rem;
+                        }
                     }
                 }
                 .review-cont {
                     width: 100%;
-                    padding: 6rem 5rem;
-                    @include flexbox(column, flex-start, flex-start);
+                    max-width: 96rem;
+                    margin: 0 auto;
+                    padding: 6rem 0;
+                    @include flexbox(column, flex-start, center);
                     gap: 6rem;
+                    @include tablet {
+                        padding: 4rem 0;
+                        gap: 4rem;
+                    }
+                    @media (max-width:655px) {
+                        align-items: flex-start;
+                    }
                     .img-wrap {
                         width: 100%;
-                        height: 60rem;
+                        aspect-ratio: 8/5;
+                        &.type01 {
+                            max-width: 60rem;
+                            aspect-ratio: 3/4;
+                        }
                         img {
                             width: 100%;
                             height: 100%;
-                            object-fit: contain;
+                            object-fit: cover;
                         }
+                    }
+                    p {
+                        font-size: 1.5rem;
+                        line-height: 2.2rem;
                     }
                 }
                 .btn-wrap {
                     padding-top: 6rem;
                     border-top: 1px solid $gray02;
                     @include flexbox(row, center, center);
+                    @include tablet {
+                        padding-top: 4rem;
+                    }
                     a {
                         width: 21.3rem;
                         border: 1px solid $gray02;
