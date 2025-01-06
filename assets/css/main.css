@@ -952,26 +952,112 @@ section.sec02 > .inner .check-list ul {
   }
 }
 section.sec02 > .inner .check-list ul > .menu {
+  position: relative;
   width: calc(33.3333333333% - 1.1rem);
   height: 100%;
   flex-shrink: 0;
   padding: 2rem;
   border-radius: 0.4rem;
   border: 1px solid #E4E4E4;
+  background: #fff;
+  overflow: hidden;
 }
 @media (max-width: 768px) {
   section.sec02 > .inner .check-list ul > .menu {
     width: 24.7rem;
   }
 }
-section.sec02 > .inner .check-list ul > .menu:nth-of-type(1) {
-  background: url(../../assets/images/main/check_item01.png) no-repeat right 2rem bottom 2rem/10rem #fff;
+section.sec02 > .inner .check-list ul > .menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  z-index: 2;
 }
-section.sec02 > .inner .check-list ul > .menu:nth-of-type(2) {
-  background: url(../../assets/images/main/check_item02.png) no-repeat right 2rem bottom 2rem/10rem #fff;
+section.sec02 > .inner .check-list ul > .menu:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
 }
-section.sec02 > .inner .check-list ul > .menu:nth-of-type(3) {
-  background: url(../../assets/images/main/check_item03.png) no-repeat right 2rem bottom 2rem/10rem #fff;
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+section.sec02 > .inner .check-list ul > .menu:nth-of-type(1):hover .icon-wrap .motion {
+  -webkit-animation: motion01 0.8s ease-in-out infinite alternate;
+  animation: motion01 0.8s ease-in-out infinite alternate;
+}
+@-webkit-keyframes motion01 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+@keyframes motion01 {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+section.sec02 > .inner .check-list ul > .menu:nth-of-type(2):hover .icon-wrap .motion {
+  -webkit-animation: motion02 0.8s ease-in-out infinite alternate;
+  animation: motion02 0.8s ease-in-out infinite alternate;
+}
+@-webkit-keyframes motion02 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes motion02 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+section.sec02 > .inner .check-list ul > .menu:nth-of-type(3):hover .icon-wrap .motion {
+  -webkit-animation: motion03 3s cubic-bezier(0.7, 0, 0, 1.01) infinite;
+  animation: motion03 3s cubic-bezier(0.7, 0, 0, 1.01) infinite;
+}
+@-webkit-keyframes motion03 {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: -100%;
+    opacity: 0;
+  }
+}
+@keyframes motion03 {
+  0% {
+    bottom: 0;
+    opacity: 1;
+  }
+  100% {
+    bottom: -100%;
+    opacity: 0;
+  }
 }
 section.sec02 > .inner .check-list ul > .menu .num {
   display: flex;
@@ -1014,6 +1100,20 @@ section.sec02 > .inner .check-list ul > .menu p:nth-of-type(2) {
   font-size: 1.5rem;
   line-height: 2.2rem;
   color: #555;
+}
+section.sec02 > .inner .check-list ul > .menu .icon-wrap {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  bottom: 2rem;
+  right: 2rem;
+}
+section.sec02 > .inner .check-list ul > .menu .icon-wrap img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 section.sec03 > .inner > .list-wrap ul {
   width: 100%;
@@ -1171,13 +1271,19 @@ section.sec04 > .inner > .list-wrap ul li a .img-wrap {
   width: 100%;
   aspect-ratio: 1;
   margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 section.sec04 > .inner > .list-wrap ul li a .img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s;
 }
-section.sec04 > .inner > .list-wrap ul li a p {
+section.sec04 > .inner > .list-wrap ul li a .txt-wrap p {
   font-size: 1.7rem;
   line-height: 2.4rem;
   font-weight: 700;
@@ -1186,7 +1292,7 @@ section.sec04 > .inner > .list-wrap ul li a p {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-section.sec04 > .inner > .list-wrap ul li a span {
+section.sec04 > .inner > .list-wrap ul li a .txt-wrap span {
   font-size: 1.7rem;
   line-height: 2.4rem;
   color: #8E8E8E;
