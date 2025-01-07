@@ -134,7 +134,7 @@ button {
   display: inline-block;
   right: 2rem;
   bottom: 2rem;
-  z-index: 99;
+  z-index: 88;
 }
 .quick-menu .inner {
   display: flex;
@@ -342,7 +342,7 @@ button {
   display: inline-block;
   right: 2rem;
   bottom: 2rem;
-  z-index: 99;
+  z-index: 88;
 }
 .quick-menu .inner {
   display: flex;

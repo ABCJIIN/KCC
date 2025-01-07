@@ -173,7 +173,7 @@ button {
     display: inline-block;
     right: 2rem;
     bottom: 2rem;
-    z-index: 99;
+    z-index: 88;
     .inner {
         @include flexbox(column, center, center);
         gap: 1.2rem;
