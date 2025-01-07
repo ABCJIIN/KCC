@@ -886,23 +886,8 @@ footer .inner .info-wrap .info .copyright {
     line-height: 4.2rem;
   }
 }
-@media (max-width: 1000px) {
-  .company #wrap section.sec02 {
-    padding: 0;
-  }
-}
 .company #wrap section.sec02 > .inner {
   position: relative;
-}
-@media (max-width: 1000px) {
-  .company #wrap section.sec02 > .inner .title-wrap {
-    padding: 0 2rem;
-  }
-}
-@media (max-width: 1000px) {
-  .company #wrap section.sec02 > .inner .list-wrap {
-    padding-left: 2rem;
-  }
 }
 .company #wrap section.sec02 > .inner .list-wrap ul {
   width: 100%;
@@ -912,15 +897,15 @@ footer .inner .info-wrap .info .copyright {
   align-items: flex-start;
   gap: 1.6rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 930px) {
   .company #wrap section.sec02 > .inner .list-wrap ul {
-    padding-right: 2rem;
-    overflow-x: auto;
-    -ms-overflow-style: none; /* 인터넷 익스플로러 */
-    scrollbar-width: none; /* 파이어폭스 */
+    flex-wrap: wrap;
   }
-  .company #wrap section.sec02 > .inner .list-wrap ul::-webkit-scrollbar {
-    display: none;
+}
+@media (max-width: 500px) {
+  .company #wrap section.sec02 > .inner .list-wrap ul {
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 .company #wrap section.sec02 > .inner .list-wrap ul li {
@@ -932,16 +917,21 @@ footer .inner .info-wrap .info .copyright {
   border-radius: 4px;
   background: #fff;
 }
-@media (max-width: 1000px) {
+@media (max-width: 930px) {
   .company #wrap section.sec02 > .inner .list-wrap ul li {
-    width: 25.3rem;
+    width: calc(50% - 0.8rem);
+  }
+}
+@media (max-width: 500px) {
+  .company #wrap section.sec02 > .inner .list-wrap ul li {
+    width: 100%;
   }
 }
 .company #wrap section.sec02 > .inner .list-wrap ul li .img-wrap {
   position: relative;
   width: 100%;
   height: 19.2rem;
-  background: url(../../assets/images/sub/compay_list_bg.png) no-repeat center/cover;
+  background: url(../../assets/images/sub/compay_list_bg.png) no-repeat bottom center/cover;
 }
 .company #wrap section.sec02 > .inner .list-wrap ul li .img-wrap img {
   position: absolute;
@@ -958,13 +948,11 @@ footer .inner .info-wrap .info .copyright {
   gap: 1.4rem;
 }
 .company #wrap section.sec02 > .inner .list-wrap ul li .info-wrap strong {
-  font-size: 2.1rem;
   font-size: clamp(1.8rem, 1.094vw, 2.1rem);
   font-weight: 700;
-  line-height: 2.8rem;
   line-height: clamp(2.1rem, 1.458vw, 2.8rem);
 }
-@media (max-width: 1000px) {
+@media (max-width: 500px) {
   .company #wrap section.sec02 > .inner .list-wrap ul li .info-wrap strong {
     font-size: 2.1rem;
     line-height: 2.8rem;
