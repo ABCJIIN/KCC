@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // INCLUDE 파일 공통요소 불러오는 스크립트
-    $("header").load("../../html/include/header.html"); // 헤더 INCLUDE  
+    $("header").load("../../html/include/header_sub.html"); // 헤더 INCLUDE  
     $("footer").load("../../html/include/footer.html"); // 푸터 INCLUDE
     $(".quick-menu").load("../../html/include/quick_menu.html"); // 퀵메뉴 INCLUDE
 
