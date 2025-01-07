@@ -85,7 +85,7 @@ header {
                     right: 1.6rem;
                     top: 50%;
                     transform: translateY(-50%);
-                    background: url(../../../assets/images/icon/menu.png) no-repeat center/contain;
+                    background: url(../../assets/images/icon/menu.png) no-repeat center/contain;
                 }
             }
         }
@@ -124,7 +124,7 @@ header {
                 &.close-btn {
                     top: 2.4rem;
                     right: 2rem;
-                    background: url(../../../assets/images/icon/close.png) no-repeat center/contain;
+                    background: url(../../assets/images/icon/close.png) no-repeat center/contain;
                 }
             }
         }
@@ -170,7 +170,7 @@ footer {
                     }
                     &:nth-of-type(1) {
                         &::before {
-                            background: url(../../../assets/images/icon/phone.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
+                            background: url(../../assets/images/icon/phone.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
                         }
                         p {
                             a {
@@ -191,7 +191,7 @@ footer {
                     }
                     &:nth-of-type(2) {
                         &::before {
-                            background: url(../../../assets/images/icon/mail.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
+                            background: url(../../assets/images/icon/mail.png) no-repeat center/2rem rgba(255, 255, 255, 0.20);
                         }
                     }
                     @media (max-width: 1000px) {

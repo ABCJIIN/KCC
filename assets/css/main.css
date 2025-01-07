@@ -148,7 +148,7 @@ button {
   height: 4.8rem;
   border-radius: 50%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  background: url(../../../assets/images/icon/chat.png) no-repeat center/2.4rem #1A4298;
+  background: url(../../assets/images/icon/chat.png) no-repeat center/2.4rem #1A4298;
 }
 .quick-menu .inner .top-btn {
   width: 4.8rem;
@@ -156,7 +156,7 @@ button {
   border-radius: 50%;
   border: 1px solid #F0F0F0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
+  background: url(../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
   display: none;
 }
 
@@ -356,7 +356,7 @@ button {
   height: 4.8rem;
   border-radius: 50%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  background: url(../../../assets/images/icon/chat.png) no-repeat center/2.4rem #1A4298;
+  background: url(../../assets/images/icon/chat.png) no-repeat center/2.4rem #1A4298;
 }
 .quick-menu .inner .top-btn {
   width: 4.8rem;
@@ -364,7 +364,7 @@ button {
   border-radius: 50%;
   border: 1px solid #F0F0F0;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05);
-  background: url(../../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
+  background: url(../../assets/images/icon/arrow_up.png) no-repeat center/2.4rem #fff;
   display: none;
 }
 
@@ -512,7 +512,7 @@ header .inner > .btn-wrap button.ham-btn {
   right: 1.6rem;
   top: 50%;
   transform: translateY(-50%);
-  background: url(../../../assets/images/icon/menu.png) no-repeat center/contain;
+  background: url(../../assets/images/icon/menu.png) no-repeat center/contain;
 }
 header .inner.mo {
   position: absolute;
@@ -551,7 +551,7 @@ header .inner.mo .gnb ul li a {
 header .inner.mo > .btn-wrap button.close-btn {
   top: 2.4rem;
   right: 2rem;
-  background: url(../../../assets/images/icon/close.png) no-repeat center/contain;
+  background: url(../../assets/images/icon/close.png) no-repeat center/contain;
 }
 
 footer {
@@ -613,7 +613,7 @@ footer .inner .contact ul li::before {
   border-radius: 50%;
 }
 footer .inner .contact ul li:nth-of-type(1)::before {
-  background: url(../../../assets/images/icon/phone.png) no-repeat center/2rem rgba(255, 255, 255, 0.2);
+  background: url(../../assets/images/icon/phone.png) no-repeat center/2rem rgba(255, 255, 255, 0.2);
 }
 footer .inner .contact ul li:nth-of-type(1) p a:first-child::before {
   content: "";
@@ -626,7 +626,7 @@ footer .inner .contact ul li:nth-of-type(1) p a:first-child::before {
   background: #C6C6C6;
 }
 footer .inner .contact ul li:nth-of-type(2)::before {
-  background: url(../../../assets/images/icon/mail.png) no-repeat center/2rem rgba(255, 255, 255, 0.2);
+  background: url(../../assets/images/icon/mail.png) no-repeat center/2rem rgba(255, 255, 255, 0.2);
 }
 @media (max-width: 1000px) {
   footer .inner .contact ul li {
