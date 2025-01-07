@@ -116,7 +116,7 @@ button {
   width: 2.4rem;
   height: 2.4rem;
   margin-left: 0.4rem;
-  background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+  background: url(../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
   transition: all 0.25s;
 }
 .goto-btn:hover {
@@ -324,7 +324,7 @@ button {
   width: 2.4rem;
   height: 2.4rem;
   margin-left: 0.4rem;
-  background: url(../../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
+  background: url(../../assets/images/icon/arrow_goto.png) no-repeat center/contain;
   transition: all 0.25s;
 }
 .goto-btn:hover {
