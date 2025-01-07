@@ -1,8 +1,54 @@
 $(document).ready(function(){
-    // INCLUDE 파일 공통요소 불러오는 스크립트
-    $("header").load("./html/include/header.html"); // 헤더 INCLUDE  
-    $("footer").load("./html/include/footer.html"); // 푸터 INCLUDE
-    $(".quick-menu").load("./html/include/quick_menu.html"); // 퀵메뉴 INCLUDE
+    // header
+    const hamBtn = $('.ham-btn');
+    const closeBtn = $('.close-btn');
+    const maxMobileWidth = 768; // 최대 모바일 크기 설정
+
+    function isMobile() {
+        return window.innerWidth <= maxMobileWidth; // 현재 화면 크기 확인
+    }
+
+    // quick_menu.html 페이지에서만 "counsel-btn" 숨기기
+    if (window.location.pathname.includes("contact.html")) {
+        $('.counsel-btn').hide(); // "counsel-btn" 숨김
+    }
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.top-btn').fadeIn(300);
+        } else {
+            $('.top-btn').fadeOut(300);
+        }
+    });
+    
+    $('.top-btn').click(function (event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+
+    // 이벤트 등록
+    hamBtn.on('click', function () {
+        if (isMobile()) {
+            $('header .inner.mo').addClass('on'); // 모바일에서만 실행
+        }
+    });
+
+    closeBtn.on('click', function () {
+        if (isMobile()) {
+            $('header .inner.mo').removeClass('on'); // 모바일에서만 실행
+        }
+    });
+
+    // 화면 크기 변경 시 동적 확인 (선택 사항)
+    $(window).on('resize', function () {
+        if (!isMobile()) {
+            // 모바일이 아니면 클래스 초기화 (선택 사항)
+            $('header .inner.mo').removeClass('on');
+            $('header .inner.mo').hide();
+        } else {
+            $('header .inner.mo').show();
+        }
+    });
 
     // 메인 KV 슬라이드
     var KVSlide = new Swiper("#KVSlide", {
